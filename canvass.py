@@ -8,14 +8,22 @@ but may also function well with similarly formatted results.
 
 Example usage:
 "warren_18.txt" is the textfile containing Warren County's 2018 general election
-results. 
+results. The textfile must be in the current directory.
 
-display_contests("warren_18.txt") returns all the separate electoral contest and a
+There are two functions that will useful for the user. They are display_contests and 
+gen_election_table. Run these functions with the appropriate inputs to convert election
+results.
+
+display_contests("warren_18.txt") returns all the separate electoral contests and an
 index number used to retrieve results for that contest.
 
 gen_election_table("warren_18.txt", 6, "senate_2018.csv") reads the textfile 
 warren_18.txt with the election results, looks at the sixth contest (the U.S Senate 
 race), and outputs the results to a CSV file called "senate_2018.csv"
+
+There are five other functions defined in this script. They are: read_canvass_from_text, 
+grab_contest_title, grab_candidates, verify_precincts, and grab_precincts. The user need
+not run these functions; they are run internally by the program.
 
 Warren County election results are at 
 https://www.warrencountyboe.us/results/VotingResults/default.aspx?filename=votingpublish.rpt
